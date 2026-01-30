@@ -53,6 +53,11 @@ http://localhost:8080/apps/my-app/
 ```bash
 go run main.go
 ```
+or
+```bash
+docker compose up
+```
+
 Then open:
 
 http://localhost:8080
