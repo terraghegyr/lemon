@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lemon</title>
+  <link rel="icon" type="image/svg+xml"
+  href="data:image/svg+xml,
+  <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+    <text y='0.9em' font-size='90'>🍋</text>
+  </svg>">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>🍋 Lemon</h1>
+      <p>Your tiny Go-based launcher for local web apps (HTML / CSS / WASM) Less dependencies is better. (probably)</p>
+    </header>
+
+    <section id="apps" class="grid"></section>
+  </main>
+
+  <script>
+    fetch("/api/apps")
+      .then(r => r.json())
+      .then(apps => {
+        const grid = document.getElementById("apps");
+
+        apps.forEach(app => {
+          const card = document.createElement("a");
+          card.href = `/apps/${app.name}/`;
+          card.className = "card";
+
+          card.innerHTML = `
+            <h2>${app.title}</h2>
+            <p>${app.description}</p>
+            <span>Launch →</span>
+          `;
+
+          grid.appendChild(card);
+        });
+      });
+  </script>
+</body>
+</html>
+

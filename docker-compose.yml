@@ -1,0 +1,11 @@
+services:
+  lemon:
+    image: golang:alpine3.23
+    container_name: lemon
+    restart: unless-stopped
+    working_dir: /lemon
+    volumes:
+      - .:/lemon       # mount project directory
+    ports:
+      - "8080:8080"
+    command: go run main.go # I'm too laze to build this forgive me
