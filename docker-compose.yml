@@ -5,7 +5,7 @@ services:
     restart: unless-stopped
     working_dir: /lemon
     volumes:
-      - .:/lemon       # mount project directory
+      - .:/lemon    
     ports:
       - "8080:8080"
     command: go run main.go # I'm too laze to build this forgive me
