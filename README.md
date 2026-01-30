@@ -70,4 +70,4 @@ http://localhost:8080
 ## Other Notes
 Lemon is intentionally minimal.
 
-I'm tired of the npm and web-related libraries having too many CVE. Hence, I've been only creating web app for myself just with simple html file and WASM. This is basically the somewhat extream way of achieving "Web App Security". Maybe. I don't know. I'm only using this on my home server so who cares really.
+I'm tired of the npm and web-related libraries having too many CVE. Hence, I've been only creating web app for myself just with simple html file and WASM. I know this is somewhat extream but I'm only using this on my home server so who cares really.
